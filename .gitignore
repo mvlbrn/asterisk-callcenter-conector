@@ -9,3 +9,4 @@ __history
 *.dll
 bin/*
 include/config.php
+nbproject/*
