@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Настройка коннекторов</title>
-        <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
         <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/base64.js"></script>
@@ -47,6 +47,7 @@
                         while($row = $STH->fetch()) {
                             print("<a href='?action=agent_show&agent={$row['agent']}'>".$row['agent']."</a><br>\n");
                         }
+                        print("<form><input class=span2 type=text name='agent'><input type=submit value='Добавить'><input type='hidden' name='action' value='agent_add'></form>");
                     }
                     catch(PDOException $e) {
                         echo $e->getMessage();
